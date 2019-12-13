@@ -110,6 +110,7 @@ class SortingRobot:
                 self.move_left() # move left
                 self.swap_item() # drop item, whether swapped or not
                 self.move_right() # move right
+            # For moving back to the beginning to bubble sort again
             if not self.can_move_right():
                 while self.can_move_left():
                     self.move_left()
