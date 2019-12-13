@@ -40,4 +40,12 @@ This one also has time complexity of O(n), because it will take n times to subtr
 
 ## Exercise II
 
+Essentially what we're doing is searching for the highest floor on which the egg won't break, and we want to find it as efficiently (with fewest drops and breaks) as possible. Because the floors are sorted, we can use a binary search to do this. 
 
+1. Drop an egg from the middle floor.
+2. If it breaks, move to the lower half's middle floor and repeat
+3. Else move to the higher half's middle floor and repeat. 
+
+Repeat steps 1-3 until we've found the highest floor on which the egg doesn't break. We'll know when we've reached it because the number of floors is finite (they can't be divided indefinitely).
+
+The runtime complexity for this algorithm is O(log n), because each loop reduces the search space by half. 
