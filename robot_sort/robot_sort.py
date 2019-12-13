@@ -96,28 +96,25 @@ class SortingRobot:
         """
         Sort the robot's list.
         """
-        print('list: ',self._list)
+        # print('list: ',self._list)
         self.set_light_on() # to get started
-        # self.swap_item()
         while self.light_is_on():
             self.set_light_off() # start with light off because no swaps yet
             while self.can_move_right(): # while able to move right
                 # self.swap_item() # pick up left item
-                print('ITEM',self._item)
-                self.swap_item()
+                self.swap_item() # pick up item
                 self.move_right() # move right
                 if self.compare_item() == 1: # swap if item held > item in front
                     self.swap_item()
                     self.set_light_on() # turn light on because we swapped
                 self.move_left() # move left
-                self.swap_item()
-                self.move_right() # drop item, whether swapped or not
-            while not self.can_move_right():
-                self.move_left()
-            # self.set_light_off()
-        print('list2: ',self._list)
-            # Loop for moving right and selecting largest
-            # Loop for moving left and selecting smallest
+                self.swap_item() # drop item, whether swapped or not
+                self.move_right() # move right
+            if not self.can_move_right():
+                while self.can_move_left():
+                    self.move_left()
+        # print('list2: ',self._list)
+
 
 
 
