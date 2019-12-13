@@ -26,7 +26,17 @@ O(1) + O(n) * (O(1) + O(log n) * (O(1) + O(1))) ---> simplifies to: O(n log n)
 Taking the two largest time complexities (annotated above), we multiply them because one loop is nested inside the other. Over all, the time complexity is O(n log n).
 
 
-c) 
+c) O(n)
+```python
+    def bunnyEars(bunnies):
+      if bunnies == 0:
+        return 0
+
+      return 2 + bunnyEars(bunnies-1)
+```
+This one also has time complexity of O(n), because it will take n times to subtract 1 from n until we get to 0 (at which point the function stops recursing). 
+
+
 
 ## Exercise II
 
