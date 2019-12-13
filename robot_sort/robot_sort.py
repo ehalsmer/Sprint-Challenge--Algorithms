@@ -96,8 +96,19 @@ class SortingRobot:
         """
         Sort the robot's list.
         """
-        # Fill this out
-        pass
+        print('list: ',self._list)
+        i = 0
+        j = len(self._list)-1
+        def inner(self):
+            nonlocal unsorted
+            # Base case:
+            if len(unsorted) < 2:
+                return result
+            self.set_light_on()
+            self.swap_item()
+            # Loop for moving right and selecting largest
+            # Loop for moving left and selecting smallest
+
 
 
 if __name__ == "__main__":
@@ -109,4 +120,4 @@ if __name__ == "__main__":
     robot = SortingRobot(l)
 
     robot.sort()
-    print(robot._list)
+    # print(robot._list)
