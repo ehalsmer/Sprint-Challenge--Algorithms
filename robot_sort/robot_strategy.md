@@ -19,3 +19,15 @@ Recursive process:
     2. compare item in front to item carried. If item in front is smaller, swap.
 5. Put item down (should be smallest into empty spot at far left)
 6. Repeat steps 1-5 with subarray: list[1:len(list)-2] (the two ends are now sorted)
+
+Steps 2 and 4 could be generalized by checking if the light is on:
+
+if light on:
+    1. move right
+    2. compare item in front to item carried. If item in front is larger, swap.
+
+if light off:
+    1. move left
+    2. compare item in front to item carried. If item in front is smaller, swap. If spot is empty: drop.
+
+We could also use the light to indicate whether the robot is carrying something. We shouldn't need to do this unless there are empty spots in some of the arrays. We want 'none' to be an indication the robot is at an empty spot.
