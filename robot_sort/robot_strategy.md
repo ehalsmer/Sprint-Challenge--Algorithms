@@ -1,5 +1,7 @@
 ## Strategy for robot sorting:
 
+Not using this because it requires a couple of variables. Instead see robot_bubble_strategy.py
+
 We can use something similar to selection sort. Except instead of always selecting the smallest item: as we move to the right, we select the largest item, and as we move to the left, we select the smallest. Gradually the two ends of the array will be sorted, and our range of movement will shrink towards the middle.
 
 We can use the light to keep track of whether we're moving to the right (selecting largest, light on), or moving to the left (selecting smallest, light off).
